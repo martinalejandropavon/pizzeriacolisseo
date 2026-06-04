@@ -11,13 +11,25 @@
 <body>
 
     <header class="header">
+        <!-- Menú Hamburguesa (Izquierda) -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Logo (Centro) -->
         <div class="logo">
             <img src="logo_2.png" alt="Pizzería El Colisseo" class="logo-img">
         </div>
-        <div class="contacto-rapido">
-            <span>📞 918 284 747 / 692 919 459</span>
+
+        <!-- Icono Teléfono (Derecha) -->
+        <div class="telefono-icono" id="btn-telefono">
+            📞
         </div>
-        <nav>
+        
+        <!-- Navegación lateral que se abrirá -->
+        <nav class="nav-menu" id="nav-menu">
             <ul class="nav-links">
                 <li><a href="#ofertas">Ofertas</a></li>
                 <li><a href="#crea-tu-pizza">Tu Pizza</a></li>
@@ -26,6 +38,19 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Ventana emergente (Modal) para el Teléfono -->
+    <div class="modal-telefono" id="modal-telefono">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+            <h3 class="texto-mostaza" style="margin-bottom: 10px;">¡Haz tu pedido ahora!</h3>
+            <p style="margin-bottom: 20px;">Pulsa en un número para llamar:</p>
+            <div class="numeros-contacto">
+                <a href="tel:+34918284747" class="btn-llamar">📞 918 284 747</a>
+                <a href="tel:+34692919459" class="btn-llamar">📱 692 919 459</a>
+            </div>
+        </div>
+    </div>
 
     <section class="hero fade-in">
         <div class="hero-content">
@@ -38,30 +63,36 @@
 
     <section id="ofertas" class="seccion fade-in">
         <h2 class="titulo-seccion">🔥 OFERTAS DESTACADAS</h2>
+        
         <div class="grid-ofertas">
+            <!-- Tarjeta 1: Menú Pizza -->
             <div class="tarjeta-oferta">
                 <div class="oferta-badge">Menú Pizza</div>
                 <p>Mediana (3 ing.) + 2 refrescos + complemento a elegir</p>
                 <span class="precio">17,90€</span>
             </div>
+            
+            <!-- Tarjeta 2: Menú Burguer -->
             <div class="tarjeta-oferta">
                 <div class="oferta-badge">Menú Burguer</div>
                 <p>Hamburguesa + patatas + refresco</p>
                 <span class="precio">10,00€</span>
             </div>
+            
+            <!-- Tarjeta 3: Todas las Promos de Pizzas (La del marco amarillo) -->
             <div class="tarjeta-oferta destaque">
-                <div class="oferta-badge">Martes y Miércoles</div>
+                <div class="oferta-badge">Promos Pizzas</div>
+                
+                <h4 style="color: var(--blanco-titulos); margin-bottom: 5px;">Martes y Miércoles</h4>
                 <p>3 Medianas por <strong class="texto-mostaza">30,90€</strong></p>
-                <p>3 Familiares por <strong class="texto-mostaza">43,90€</strong></p>
+                <p style="margin-bottom: 15px;">3 Familiares por <strong class="texto-mostaza">43,90€</strong></p>
+                
+                <h4 style="color: var(--blanco-titulos); margin-bottom: 5px;">2 Pizzas (hasta 4 ing.)</h4>
+                <p>2 Medianas por <strong class="texto-mostaza">20,00€</strong></p>
+                <p>2 Familiares por <strong class="texto-mostaza">28,00€</strong></p>
+                <p>2 XL por <strong class="texto-mostaza">39,00€</strong></p>
+                <p>2 Pizza Pan por <strong class="texto-mostaza">24,00€</strong></p>
             </div>
-        </div>
-        
-        <h3 class="subtitulo">MÁS PROMOCIONES (2 pizzas hasta 4 ing.)</h3>
-        <div class="grid-precios-simples">
-            <div class="item-precio"><span>2 Medianas</span> <span class="texto-mostaza">20,00€</span></div>
-            <div class="item-precio"><span>2 Familiares</span> <span class="texto-mostaza">28,00€</span></div>
-            <div class="item-precio"><span>2 XL</span> <span class="texto-mostaza">39,00€</span></div>
-            <div class="item-precio"><span>2 Pizza Pan</span> <span class="texto-mostaza">24,00€</span></div>
         </div>
     </section>
 
