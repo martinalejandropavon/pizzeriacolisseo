@@ -1,0 +1,388 @@
+/* Paleta estricta extraída de tu logo */
+:root {
+    --negro-fondo: #1c1c1b;     /* El color exacto de tu logo */
+    --negro-tarjeta: #252525;   /* Un gris oscuro para destacar las cajas sobre el fondo */
+    --amarillo-mostaza: #F4C430;
+    --blanco-texto: #e0e0e0;
+    --blanco-titulos: #ffffff;
+    --transicion: all 0.3s ease;
+}
+
+/* Reset Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--negro-fondo);
+    color: var(--blanco-texto);
+    line-height: 1.6;
+}
+
+/* MÓVIL PRIMERO (El diseño por defecto) */
+.header {
+    background-color: var(--negro-fondo);
+    padding: 15px;
+    border-bottom: 2px solid var(--amarillo-mostaza);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-img {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.contacto-rapido {
+    color: var(--blanco-titulos);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: var(--amarillo-mostaza);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero {
+    background: linear-gradient(rgba(28,28,27,0.85), rgba(28,28,27,0.95)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80') center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    color: var(--amarillo-mostaza);
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--blanco-titulos);
+    margin-bottom: 30px;
+}
+
+.nota-reparto {
+    font-size: 0.75rem !important;
+    color: #999;
+    margin-top: 25px;
+}
+
+.btn-primario {
+    display: inline-block;
+    background-color: var(--amarillo-mostaza);
+    color: var(--negro-fondo);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: var(--transicion);
+}
+
+.btn-primario:hover {
+    transform: translateY(-3px);
+    background-color: #fff;
+}
+
+.seccion {
+    padding: 60px 15px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    color: var(--blanco-titulos);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.texto-mostaza { color: var(--amarillo-mostaza); }
+.enlace-mostaza { color: var(--amarillo-mostaza); text-decoration: none; }
+.enlace-mostaza:hover { text-decoration: underline; }
+
+/* Grid base para mantener el orden */
+.grid-ofertas, .grid-precios-simples, .grid-dos-columnas, .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* En móvil solo hay 1 columna */
+    gap: 20px;
+    align-items: stretch; /* Obliga a que las cajas de la misma fila midan igual */
+}
+
+/* Tarjetas */
+.tarjeta-oferta {
+    background-color: var(--negro-tarjeta);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #333;
+    transition: var(--transicion);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.tarjeta-oferta:hover {
+    border-color: var(--amarillo-mostaza);
+    transform: translateY(-5px);
+}
+
+.tarjeta-oferta.destaque {
+    border: 2px solid var(--amarillo-mostaza);
+}
+
+.oferta-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--amarillo-mostaza);
+    color: var(--negro-fondo);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.precio { display: block; font-size: 2.2rem; color: var(--blanco-titulos); font-weight: 800; margin-top: 15px; }
+.subtitulo { text-align: center; color: var(--blanco-titulos); margin: 40px 0 20px; font-size: 1.2rem; font-weight: 600;}
+
+.item-precio {
+    background-color: var(--negro-tarjeta);
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    border-left: 3px solid var(--amarillo-mostaza);
+}
+
+.fondo-oscuro { background-color: #151515; } /* Un pelín más oscuro para crear ritmo visual */
+
+.pasos-pizza {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.paso {
+    background: var(--negro-tarjeta);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.numero-paso {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--amarillo-mostaza);
+    color: var(--negro-fondo);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.contenedor-tabla { width: 100%; overflow-x: auto; margin: 20px 0; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--negro-tarjeta);
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 300px;
+}
+th, td { padding: 15px; text-align: center; border-bottom: 1px solid #333; }
+th { background-color: var(--amarillo-mostaza); color: var(--negro-fondo); font-weight: 800; }
+
+.ingredientes-caja {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px dashed var(--amarillo-mostaza);
+}
+
+.ingredientes-caja h3 { color: var(--amarillo-mostaza); margin-bottom: 10px; text-transform: uppercase;}
+
+.cabecera-categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.cabecera-categoria h3, .columna h3 {
+    color: var(--amarillo-mostaza);
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.precios-categoria {
+    background: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--blanco-titulos);
+    margin-top: 10px;
+}
+
+.lista-platos { list-style: none; }
+.lista-platos li {
+    background-color: var(--negro-tarjeta);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--amarillo-mostaza);
+    transition: var(--transicion);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.lista-platos li:hover {
+    transform: translateX(5px);
+    background-color: #2a2a2a;
+}
+
+.lista-platos li strong {
+    color: var(--amarillo-mostaza);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.etiqueta-nuevo {
+    background: var(--blanco-titulos);
+    color: var(--negro-fondo);
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.etiqueta-pequena {
+    color: var(--amarillo-mostaza);
+    font-size: 0.7rem;
+    border: 1px solid var(--amarillo-mostaza);
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+/* Columnas de igual altura */
+.columna {
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Permite organizar el contenido verticalmente */
+    height: 100%;
+}
+
+.lista-platos-detalle { 
+    list-style: none; 
+    background: var(--negro-tarjeta); 
+    padding: 15px; 
+    border-radius: 10px;
+    flex-grow: 1; /* Hace que las cajas rellenen el espacio restante para igualar alturas */
+}
+
+.lista-platos-detalle li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #444;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+.lista-platos-detalle li:last-child { border-bottom: none; }
+
+.nota { color: #aaa; font-size: 0.8rem; margin: -5px 0 15px; text-align: center;}
+.margen-top { margin-top: 30px; margin-bottom: 15px;}
+
+footer { background-color: #111; padding: 40px 15px 20px; border-top: 1px solid #333; }
+.footer-grid { text-align: center; }
+.footer-grid h3 { margin-bottom: 15px; font-size: 1.2rem; text-transform: uppercase;}
+.footer-bottom { text-align: center; margin-top: 30px; color: #777; font-size: 0.8rem; }
+
+/* Animaciones */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* =========================================================
+   PANTALLAS GRANDES (Ordenadores y Tablets)
+   Aquí indicamos cómo se dividen las columnas
+   ========================================================= */
+@media (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+    }
+    
+    .logo-img { margin-bottom: 0; max-width: 180px; }
+    
+    .contacto-rapido { margin-bottom: 0; font-size: 1.1rem; order: 3; }
+    .nav-links { order: 2; gap: 25px; }
+    .nav-links a { color: var(--blanco-texto); font-size: 0.95rem; transition: var(--transicion); }
+    .nav-links a:hover { color: var(--amarillo-mostaza); }
+    
+    .hero { padding: 120px 20px; }
+    .hero-content h2 { font-size: 3.5rem; }
+    .hero-subtitle { font-size: 1.4rem; }
+    .seccion { padding: 80px 5%; }
+    
+    .grid-ofertas { grid-template-columns: repeat(3, 1fr); }
+    .grid-precios-simples { grid-template-columns: repeat(4, 1fr); max-width: 900px; margin: 0 auto; }
+    
+    .pasos-pizza { grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto 30px; }
+    
+    .categoria-carta { margin-bottom: 50px;}
+    .lista-platos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .lista-platos li { margin-bottom: 0; }
+    
+    /* Esta es la cuadrícula que hace que la columna 1 y la 2 vayan a la par */
+    .grid-dos-columnas { grid-template-columns: repeat(2, 1fr); gap: 40px;}
+    
+    .footer-grid { grid-template-columns: repeat(3, 1fr); text-align: left; max-width: 1200px; margin: 0 auto;}
+    
+    .contenedor-tabla { max-width: 700px; margin: 40px auto; }
+}

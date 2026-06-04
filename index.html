@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería El Colisseo</title>
+    <!-- Cargamos un tipo de letra moderno y limpio -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo_2.png" alt="Pizzería El Colisseo" class="logo-img">
+        </div>
+        <div class="contacto-rapido">
+            <span>📞 918 284 747 / 692 919 459</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#crea-tu-pizza">Tu Pizza</a></li>
+                <li><a href="#carta">Carta</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero fade-in">
+        <div class="hero-content">
+            <h2>EL AUTÉNTICO SABOR EN SAN MARTÍN DE LA VEGA</h2>
+            <p class="hero-subtitle">Servicio a domicilio GRATIS (Pedido mínimo 11€)</p>
+            <a href="#ofertas" class="btn-primario">Ver Promociones</a>
+            <p class="nota-reparto">*Reparto a Vallequillas y Ciempozuelos +2€ | Pago con tarjeta en domicilio</p>
+        </div>
+    </section>
+
+    <section id="ofertas" class="seccion fade-in">
+        <h2 class="titulo-seccion">🔥 OFERTAS DESTACADAS</h2>
+        <div class="grid-ofertas">
+            <div class="tarjeta-oferta">
+                <div class="oferta-badge">Menú Pizza</div>
+                <p>Mediana (3 ing.) + 2 refrescos + complemento a elegir</p>
+                <span class="precio">17,90€</span>
+            </div>
+            <div class="tarjeta-oferta">
+                <div class="oferta-badge">Menú Burguer</div>
+                <p>Hamburguesa + patatas + refresco</p>
+                <span class="precio">10,00€</span>
+            </div>
+            <div class="tarjeta-oferta destaque">
+                <div class="oferta-badge">Martes y Miércoles</div>
+                <p>3 Medianas por <strong class="texto-mostaza">30,90€</strong></p>
+                <p>3 Familiares por <strong class="texto-mostaza">43,90€</strong></p>
+            </div>
+        </div>
+        
+        <h3 class="subtitulo">MÁS PROMOCIONES (2 pizzas hasta 4 ing.)</h3>
+        <div class="grid-precios-simples">
+            <div class="item-precio"><span>2 Medianas</span> <span class="texto-mostaza">20,00€</span></div>
+            <div class="item-precio"><span>2 Familiares</span> <span class="texto-mostaza">28,00€</span></div>
+            <div class="item-precio"><span>2 XL</span> <span class="texto-mostaza">39,00€</span></div>
+            <div class="item-precio"><span>2 Pizza Pan</span> <span class="texto-mostaza">24,00€</span></div>
+        </div>
+    </section>
+
+    <section id="crea-tu-pizza" class="seccion fondo-oscuro fade-in">
+        <h2 class="titulo-seccion">🍕 HAZLA A TU GUSTO</h2>
+        
+        <div class="pasos-pizza">
+            <div class="paso">
+                <span class="numero-paso">1</span>
+                <h4>Elige tu Masa</h4>
+                <p>Fina, Pan o Calzone</p>
+            </div>
+            <div class="paso">
+                <span class="numero-paso">2</span>
+                <h4>Elige tu Salsa</h4>
+                <p>César, Barbacoa, Carbonara, Boloñesa, Kebab, Picante, Cheddar</p>
+            </div>
+        </div>
+        
+        <div class="contenedor-tabla">
+            <table>
+                <tr>
+                    <th>Tamaño</th>
+                    <th>Base</th>
+                    <th>Ingrediente</th>
+                </tr>
+                <tr><td>Mediana</td><td>9,00€</td><td>2,00€</td></tr>
+                <tr><td>Familiar</td><td>13,00€</td><td>2,20€</td></tr>
+                <tr><td>XL</td><td>16,00€</td><td>2,40€</td></tr>
+                <tr><td>Masa Pan</td><td>12,00€</td><td>2,00€</td></tr>
+            </table>
+        </div>
+
+        <div class="ingredientes-caja">
+            <h3>Ingredientes Disponibles</h3>
+            <p>Jamón york, mozzarella, chorizo picante, patata cocida, salchicha fresca, calabacín, huevo cocido, champiñón, aceitunas, cebolla, piña, berenjena, tomate cherry, pimiento rojo, maíz, bacon, alcachofa, chorizo, huevo al horno, jalapeños, pepperoni, rúcula, ternera, pop pollo, pollo kebab, jamón serrano, atún, anchoas, pollo, salmón, búfala, gambas, provolone, grana padano, gorgonzola, cebolla caramelizada, queso de cabra, mascarpone, patatas fritas, morcilla, queso cheddar y picada veggie.</p>
+        </div>
+    </section>
+
+    <section id="carta" class="seccion fade-in">
+        <h2 class="titulo-seccion">📜 NUESTRA CARTA</h2>
+        
+        <div class="categoria-carta">
+            <div class="cabecera-categoria">
+                <h3>Pizzas Típicas</h3>
+                <span class="precios-categoria">Med. 12€ | Fam. 17€ | XL 20€ | Pan 14€</span>
+            </div>
+            <ul class="lista-platos">
+                <li><strong>Caprichosa:</strong> Tomate, mozzarella, jamón, huevo cocido, champiñón, aceitunas.</li>
+                <li><strong>Diabla:</strong> Tomate, mozzarella, chorizo picante, bacon, cebolla, pimiento.</li>
+                <li><strong>Tonno:</strong> Tomate, mozzarella, atún, cebolla, aceitunas.</li>
+                <li><strong>Hawaiana:</strong> Tomate, mozzarella, piña, jamón york.</li>
+                <li><strong>Siciliana:</strong> Tomate, mozzarella, berenjena, champiñón, tomate cherry.</li>
+                <li><strong>Barbacoa:</strong> Tomate, mozzarella, salsa barbacoa, pollo, maíz.</li>
+                <li><strong>Carbonara:</strong> Mozzarella, salsa carbonara, bacon, champiñón.</li>
+                <li><strong>Roma:</strong> Tomate, mozzarella, atún, cebolla, champiñón.</li>
+                <li><strong>Piccante:</strong> Mozzarella, ternera, salsa picante, pimiento.</li>
+                <li><strong>Mediterránea:</strong> Tomate, mozzarella, chorizo, aceitunas, tomate cherry.</li>
+                <li><strong>Carciofina:</strong> Tomate, mozzarella, alcachofa, bacon, perejil, ajo.</li>
+                <li><strong>Parmigiana:</strong> Tomate, mozzarella, berenjena, alcachofa, grana padano, albahaca.</li>
+                <li><strong>Boloñesa:</strong> Mozzarella, salsa boloñesa, bacon, cebolla, grana padano.</li>
+                <li><strong>Contadina:</strong> Mozzarella, patata cocida, salchicha fresca, romero, jamón york, aceite.</li>
+                <li><strong>Vegana:</strong> Tomate, patata cocida, calabacín, aceitunas, cebolla.</li>
+                <li><span class="etiqueta-nuevo">NUEVO</span> <strong>Mixta:</strong> Tomate, mozzarella, queso cheddar, jamón York, huevo al horno.</li>
+            </ul>
+        </div>
+
+        <div class="categoria-carta">
+            <div class="cabecera-categoria">
+                <h3>Pizzas Especiales</h3>
+                <span class="precios-categoria">Med. 14€ | Fam. 19€ | XL 22€ | Pan 16€</span>
+            </div>
+            <ul class="lista-platos">
+                <li><strong>Marinara:</strong> Tomate, mozzarella, atún, gambas, aceitunas.</li>
+                <li><strong>Barbacoa Especial:</strong> Tomate, mozzarella, ternera, bacon, pollo, salsa barbacoa.</li>
+                <li><strong>Mariemonti:</strong> Tomate, mozzarella, rúcula, salmón, champiñón.</li>
+                <li><strong>Colisseo:</strong> Tomate, mozzarella, aceitunas, champiñón, ternera, pimiento.</li>
+                <li><strong>Búfala:</strong> Tomate, mozzarella di bufala, tomate cherry, albahaca, aceitunas.</li>
+                <li><strong>4 Quesos:</strong> Tomate, mozzarella, grana padano, provolone, gorgonzola.</li>
+                <li><strong>Rústica:</strong> Tomate, mozzarella, bacon, champiñón, jamón serrano.</li>
+                <li><strong>Alice:</strong> Tomate, mozzarella, anchoas, tomate cherry, cebolla, aceitunas.</li>
+                <li><strong>Romana:</strong> Tomate, mozzarella, jamón york, champiñón, bacon.</li>
+                <li><strong>Cabramelizada:</strong> Tomate, mozzarella, queso de cabra, tomate cherry, cebolla caramelizada.</li>
+                <li><strong>Delizia:</strong> Mozzarella, salsa carbonara, salmón, rúcula.</li>
+                <li><strong>Suprema:</strong> Tomate, mozzarella, salchicha, ternera, pollo, bacon.</li>
+                <li><strong>San Martín:</strong> Tomate, mozzarella, cebolla, salchicha, champiñón, jamón serrano, huevo al horno.</li>
+                <li><strong>Huevo roto:</strong> Tomate, mozzarella, patatas fritas, salchicha, jamón serrano, huevo al horno.</li>
+                <li><strong>Cremeroma:</strong> Mozzarella, salsa carbonara, atún, cebolla, champiñón.</li>
+                <li><strong>Cremosa:</strong> Mozzarella, salsa carbonara, barbacoa, ternera, cebolla, bacon.</li>
+                <li><strong>Ranchera:</strong> Tomate, mozzarella, cebolla, jamón, bacon, ternera, jalapeños.</li>
+                <li><strong>Pepperonesa:</strong> Tomate, mozzarella, pepperoni, bacon, aceitunas.</li>
+                <li><strong>Morateña:</strong> Tomate, mozzarella, morcilla, queso de cabra, jamón york.</li>
+                <li><strong>Kebab:</strong> Tomate, mozzarella, cebolla, tomate cherry, pollo kebab, salsa kebab.</li>
+                <li><strong>Cesar pop:</strong> Tomate, mozzarella, bacon, pop pollo, cherry, salsa cesar.</li>
+                <li><span class="etiqueta-nuevo">NUEVO</span> <strong>Veggie:</strong> Tomate, patata cocida, picada veggie, pimiento, cebolla y maíz.</li>
+                <li><span class="etiqueta-nuevo">NUEVO</span> <strong>Vicky:</strong> Salsa cheddar, mozzarella, ternera, bacon, cebolla, huevo al horno.</li>
+            </ul>
+        </div>
+
+        <div class="grid-dos-columnas">
+            <div class="columna">
+                <h3>🍔 Hamburguesas</h3>
+                <p class="nota">Doble de carne por +2,00€</p>
+                <ul class="lista-platos-detalle">
+                    <li><span>Chicken Classic</span> <span class="texto-mostaza">5,00€</span></li>
+                    <li><span>Chicken Rodeo</span> <span class="texto-mostaza">6,00€</span></li>
+                    <li><span>Chicken Especial</span> <span class="texto-mostaza">6,00€</span></li>
+                    <li><span>Chicken Cheddar <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">6,00€</span></li>
+                </ul>
+
+                <h3 class="margen-top">🥗 Ensaladas</h3>
+                <ul class="lista-platos-detalle">
+                    <li><span>Mixta</span> <span class="texto-mostaza">5,50€</span></li>
+                    <li><span>Especial</span> <span class="texto-mostaza">6,50€</span></li>
+                    <li><span>César</span> <span class="texto-mostaza">6,50€</span></li>
+                    <li><span>Kebab</span> <span class="texto-mostaza">6,90€</span></li>
+                </ul>
+            </div>
+
+            <div class="columna">
+                <h3>🍟 Entrantes</h3>
+                <ul class="lista-platos-detalle">
+                    <li><span>Nuggets (6u)</span> <span class="texto-mostaza">3,90€</span></li>
+                    <li><span>Croquetas (6u)</span> <span class="texto-mostaza">3,90€</span></li>
+                    <li><span>Combo Colisseo</span> <span class="texto-mostaza">6,50€</span></li>
+                    <li><span>Fingers pollo (4u)</span> <span class="texto-mostaza">5,00€</span></li>
+                    <li><span>Fingers mozz. (6u)</span> <span class="texto-mostaza">3,90€</span></li>
+                    <li><span>Aros cebolla (8u)</span> <span class="texto-mostaza">3,90€</span></li>
+                    <li><span>Alitas pollo (6u)</span> <span class="texto-mostaza">5,00€</span></li>
+                    <li><span>Patatas (Ind.)</span> <span class="texto-mostaza">3,10€</span></li>
+                    <li><span>Patatas (Grande)</span> <span class="texto-mostaza">5,00€</span></li>
+                </ul>
+
+                <h3 class="margen-top">🍰 Postres (4,00€)</h3>
+                <ul class="lista-platos-detalle">
+                    <li>Tartas: Chocolate, Queso, Zanahoria, Manzana</li>
+                    <li>Brownie con helado</li>
+                    <li>Profiteroles (4u)</li>
+                    <li>Gofre</li>
+                    <li><span>Tarrina Haagen-Dazs</span> <span class="texto-mostaza">7,00€</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-grid">
+            <div>
+                <h3 class="texto-mostaza">📍 Ubicación</h3>
+                <p>Av. Comunidad de Madrid 73</p>
+                <p>San Martín de la Vega</p>
+            </div>
+            <div>
+                <h3 class="texto-mostaza">🕒 Horario</h3>
+                <p><strong>M a J:</strong> 19:00 - 23:30</p>
+                <p><strong>V a D y Festivos:</strong> 19:00 - 00:00</p>
+            </div>
+            <div>
+                <h3 class="texto-mostaza">📱 Contacto</h3>
+                <p>918 284 747 / 692 919 459</p>
+                <p><a href="http://elcolisseo.es" class="enlace-mostaza">elcolisseo.es</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pizzería El Colisseo.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
