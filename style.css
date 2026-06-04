@@ -23,46 +23,141 @@ body {
 }
 
 /* MÓVIL PRIMERO (El diseño por defecto) */
+/* MÓVIL PRIMERO (El diseño por defecto) */
 .header {
     background-color: var(--negro-fondo);
-    padding: 15px;
+    padding: 10px 20px;
     border-bottom: 2px solid var(--amarillo-mostaza);
-    text-align: center;
+    display: flex;
+    justify-content: space-between; /* Separa los elementos: izquierda, centro y derecha */
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .logo-img {
-    max-width: 250px;
+    max-width: 160px; /* Un poco más pequeño en móvil para que quepa todo */
     height: auto;
-    margin-bottom: 10px;
+    display: block;
 }
 
-.contacto-rapido {
-    color: var(--blanco-titulos);
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+/* Icono Menú Hamburguesa */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001; /* Siempre por encima */
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--amarillo-mostaza);
+    transition: var(--transicion);
+}
+
+/* Icono Teléfono */
+.telefono-icono {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--amarillo-mostaza);
+    z-index: 1001;
+}
+
+/* Menú lateral oculto */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Oculto a la izquierda */
+    width: 70%;
+    max-width: 300px;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.8);
+    z-index: 999;
+}
+
+.nav-menu.activo {
+    left: 0; /* Al añadir esta clase con Javascript, el menú entra en pantalla */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
 }
 
 .nav-links a {
-    color: var(--amarillo-mostaza);
+    color: var(--blanco-texto);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 800;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
+/* Diseño de la ventana que salta para llamar (Modal) */
+.modal-telefono {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); /* Fondo negro transparente */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-telefono.activo {
+    display: flex; /* Se muestra al activarlo */
+}
+
+.modal-contenido {
+    background-color: var(--negro-tarjeta);
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid var(--amarillo-mostaza);
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 350px;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2rem;
+    color: var(--blanco-texto);
+    cursor: pointer;
+}
+
+.numeros-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-llamar {
+    background-color: var(--amarillo-mostaza);
+    color: var(--negro-fondo);
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
 .hero {
     background: linear-gradient(rgba(28,28,27,0.85), rgba(28,28,27,0.95)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80') center/cover;
     padding: 80px 20px;
@@ -351,19 +446,46 @@ footer { background-color: #111; padding: 40px 15px 20px; border-top: 1px solid 
    Aquí indicamos cómo se dividen las columnas
    ========================================================= */
 @media (min-width: 768px) {
+    /* Ocultamos iconos de móvil en ordenador */
+    .menu-toggle { display: none; }
+    .telefono-icono { display: none; }
+    
     .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 10px 5%;
+        justify-content: center; /* Centra el logo y el menú juntos */
+        gap: 120px; /* Crea una separación exacta entre el logo y las letras */
     }
     
-    .logo-img { margin-bottom: 0; max-width: 180px; }
+    .logo-img { max-width: 180px; }
     
-    .contacto-rapido { margin-bottom: 0; font-size: 1.1rem; order: 3; }
-    .nav-links { order: 2; gap: 25px; }
-    .nav-links a { color: var(--blanco-texto); font-size: 0.95rem; transition: var(--transicion); }
-    .nav-links a:hover { color: var(--amarillo-mostaza); }
+    /* Restauramos el menú para que se vea horizontal en ordenador */
+    /* Restauramos el menú para que se vea horizontal en ordenador */
+    .nav-menu {
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Alinea todo perfectamente al centro vertical */
+    }
+    
+    .nav-links {
+        flex-direction: row;
+        gap: 30px; /* Le damos un poco más de aire entre las palabras */
+        align-items: center;
+    }
+    
+    .nav-links a { 
+        font-size: 1rem; 
+        transition: var(--transicion); 
+        white-space: nowrap; /* ESTA ES LA CLAVE: Evita que las palabras se partan en dos líneas */
+    }
+    
+    .nav-links a:hover { 
+        color: var(--amarillo-mostaza); 
+    }
     
     .hero { padding: 120px 20px; }
     .hero-content h2 { font-size: 3.5rem; }
