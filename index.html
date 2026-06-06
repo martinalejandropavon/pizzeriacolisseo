@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
 
     <header class="header">
         <!-- Menú Hamburguesa (Izquierda) -->
@@ -18,10 +18,10 @@
             <span class="bar"></span>
         </div>
 
-        <!-- Logo (Centro) -->
-        <div class="logo">
+        <!-- Logo (Centro) ¡Ahora es clickeable! -->
+        <a href="#top" class="logo">
             <img src="logo_2.png" alt="Pizzería El Colisseo" class="logo-img">
-        </div>
+        </a>
 
         <!-- Icono Teléfono (Derecha) -->
         <div class="telefono-icono" id="btn-telefono">
@@ -68,30 +68,38 @@
             <!-- Tarjeta 1: Menú Pizza -->
             <div class="tarjeta-oferta">
                 <div class="oferta-badge">Menú Pizza</div>
-                <p>Mediana (3 ing.) + 2 refrescos + complemento a elegir</p>
+                <p>Pizza mediana (3 ingredientes) + 2 refrescos 33cl + complemento a elegir (patatas individuales, aros, nuggets o croquetas)</p>
                 <span class="precio">17,90€</span>
             </div>
             
             <!-- Tarjeta 2: Menú Burguer -->
             <div class="tarjeta-oferta">
                 <div class="oferta-badge">Menú Burguer</div>
-                <p>Hamburguesa + patatas + refresco</p>
+                <p>Elije 1 de nuestras hamburguesas + patatas individuales + 1 refresco de 33cl</p>
                 <span class="precio">10,00€</span>
             </div>
             
-            <!-- Tarjeta 3: Todas las Promos de Pizzas (La del marco amarillo) -->
+            <!-- Tarjeta 3: Todas las Promos de Pizzas -->
             <div class="tarjeta-oferta destaque">
                 <div class="oferta-badge">Promos Pizzas</div>
                 
-                <h4 style="color: var(--blanco-titulos); margin-bottom: 5px;">Martes y Miércoles</h4>
-                <p>3 Medianas por <strong class="texto-mostaza">30,90€</strong></p>
-                <p style="margin-bottom: 15px;">3 Familiares por <strong class="texto-mostaza">43,90€</strong></p>
+                <p style="font-size:0.85rem; color:#ccc; margin-bottom:20px;">*Añade a estas ofertas un refresco de 2L. por sólo 2,50€</p>
                 
-                <h4 style="color: var(--blanco-titulos); margin-bottom: 5px;">2 Pizzas (hasta 4 ing.)</h4>
-                <p>2 Medianas por <strong class="texto-mostaza">20,00€</strong></p>
-                <p>2 Familiares por <strong class="texto-mostaza">28,00€</strong></p>
-                <p>2 XL por <strong class="texto-mostaza">39,00€</strong></p>
-                <p>2 Pizza Pan por <strong class="texto-mostaza">24,00€</strong></p>
+                <!-- Sección de 3 Pizzas con aclaración integrada -->
+                <div style="margin-bottom: 25px;">
+                    <p>3 Medianas por <strong class="texto-mostaza">30,90€</strong></p>
+                    <p>3 Familiares por <strong class="texto-mostaza">43,90€</strong></p>
+                    <span style="font-size: 0.75rem; color: var(--amarillo-mostaza); font-weight: bold; display: block; margin-top: 4px; letter-spacing: 0.5px;">(OFERTA EXCLUSIVA: MARTES Y MIÉRCOLES)</span>
+                </div>
+                
+                <!-- Sección de 2 Pizzas disponible cualquier día -->
+                <div>
+                    <h4 style="color: var(--blanco-titulos); margin-bottom: 8px; font-size: 1.1rem;">2 Pizzas (hasta 4 ing.)</h4>
+                    <p>2 Medianas por <strong class="texto-mostaza">20,00€</strong></p>
+                    <p>2 Familiares por <strong class="texto-mostaza">28,00€</strong></p>
+                    <p>2 XL por <strong class="texto-mostaza">39,00€</strong></p>
+                    <p>2 Pizza Pan por <strong class="texto-mostaza">24,00€</strong></p>
+                </div>
             </div>
         </div>
     </section>
@@ -103,12 +111,12 @@
             <div class="paso">
                 <span class="numero-paso">1</span>
                 <h4>Elige tu Masa</h4>
-                <p>Fina, Pan o Calzone</p>
+                <p>Pizza Pan, masa fina ó calzone</p>
             </div>
             <div class="paso">
                 <span class="numero-paso">2</span>
                 <h4>Elige tu Salsa</h4>
-                <p>César, Barbacoa, Carbonara, Boloñesa, Kebab, Picante, Cheddar</p>
+                <p>César, Barbacoa, Carbonara, Boloñesa, Kebab, Picante, Salsa Cheddar</p>
             </div>
         </div>
         
@@ -117,7 +125,7 @@
                 <tr>
                     <th>Tamaño</th>
                     <th>Base</th>
-                    <th>Ingrediente</th>
+                    <th>Ingredientes</th>
                 </tr>
                 <tr><td>Mediana</td><td>9,00€</td><td>2,00€</td></tr>
                 <tr><td>Familiar</td><td>13,00€</td><td>2,20€</td></tr>
@@ -127,8 +135,11 @@
         </div>
 
         <div class="ingredientes-caja">
+            <p class="nota" style="color: var(--blanco-titulos); margin-bottom: 5px;">* En pizzas de 2 mitades se cobrará la de mayor importe.</p>
+            <p class="nota" style="color: var(--blanco-titulos); margin-bottom: 15px;">* Haz cualquier pizza calzone (excepto con huevo al horno).</p>
+            
             <h3>Ingredientes Disponibles</h3>
-            <p>Jamón york, mozzarella, chorizo picante, patata cocida, salchicha fresca, calabacín, huevo cocido, champiñón, aceitunas, cebolla, piña, berenjena, tomate cherry, pimiento rojo, maíz, bacon, alcachofa, chorizo, huevo al horno, jalapeños, pepperoni, rúcula, ternera, pop pollo, pollo kebab, jamón serrano, atún, anchoas, pollo, salmón, búfala, gambas, provolone, grana padano, gorgonzola, cebolla caramelizada, queso de cabra, mascarpone, patatas fritas, morcilla, queso cheddar y picada veggie.</p>
+            <p>Jamón york, mozzarella, chorizo picante, patata cocida, salchicha fresca, calabacín, huevo cocido, champiñón, aceitunas, cebolla, piña, berenjena, tomate cherry, pimiento rojo, maíz, bacon, alcachofa, chorizo, huevo al horno, jalapeños, pepperoni, rúcula, ternera, pop pollo, pollo kebab, jamón serrano, atún, anchoas, pollo, salmón, búfala, gambas, provolone, grana padano, gorgonzola, cebolla caramelizada, queso de cabra, mascarpone, patatas fritas, morcilla, queso cheddar, picada veggie.</p>
         </div>
     </section>
 
@@ -138,7 +149,7 @@
         <div class="categoria-carta">
             <div class="cabecera-categoria">
                 <h3>Pizzas Típicas</h3>
-                <span class="precios-categoria">Med. 12€ | Fam. 17€ | XL 20€ | Pan 14€</span>
+                <span class="precios-categoria">Med. 12,00€ | Fam. 17,00€ | XL 20,00€ | Pan 14,00€</span>
             </div>
             <ul class="lista-platos">
                 <li><strong>Caprichosa:</strong> Tomate, mozzarella, jamón, huevo cocido, champiñón, aceitunas.</li>
@@ -163,7 +174,7 @@
         <div class="categoria-carta">
             <div class="cabecera-categoria">
                 <h3>Pizzas Especiales</h3>
-                <span class="precios-categoria">Med. 14€ | Fam. 19€ | XL 22€ | Pan 16€</span>
+                <span class="precios-categoria">Med. 14,00€ | Fam. 19,00€ | XL 22,00€ | Pan 16,00€</span>
             </div>
             <ul class="lista-platos">
                 <li><strong>Marinara:</strong> Tomate, mozzarella, atún, gambas, aceitunas.</li>
@@ -195,44 +206,111 @@
         <div class="grid-dos-columnas">
             <div class="columna">
                 <h3>🍔 Hamburguesas</h3>
-                <p class="nota">Doble de carne por +2,00€</p>
+                <p class="nota" style="margin-bottom: 15px;">Haz tú hamburguesa con doble de carne por solo +2,00€ más</p>
                 <ul class="lista-platos-detalle">
-                    <li><span>Chicken Classic</span> <span class="texto-mostaza">5,00€</span></li>
-                    <li><span>Chicken Rodeo</span> <span class="texto-mostaza">6,00€</span></li>
-                    <li><span>Chicken Especial</span> <span class="texto-mostaza">6,00€</span></li>
-                    <li><span>Chicken Cheddar <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">6,00€</span></li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Chicken Classic</span> <span class="texto-mostaza">5,00€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Chicken crispy, queso cheddar, lechuga y ketchup.</span>
+                    </li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Chicken Rodeo</span> <span class="texto-mostaza">6,00€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Chicken crispy, lechuga, cheddar, 2 aros de cebolla, salsa barbacoa.</span>
+                    </li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Chicken Especial</span> <span class="texto-mostaza">6,00€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Chicken crispy, cebolla caramelizada, queso cabra, rúcula, salsa barbacoa.</span>
+                    </li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Chicken Cheddar <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">6,00€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Chicken crispy, rúcula, bacon frito, queso cheddar, salsa cheddar.</span>
+                    </li>
                 </ul>
 
                 <h3 class="margen-top">🥗 Ensaladas</h3>
                 <ul class="lista-platos-detalle">
-                    <li><span>Mixta</span> <span class="texto-mostaza">5,50€</span></li>
-                    <li><span>Especial</span> <span class="texto-mostaza">6,50€</span></li>
-                    <li><span>César</span> <span class="texto-mostaza">6,50€</span></li>
-                    <li><span>Kebab</span> <span class="texto-mostaza">6,90€</span></li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Ensalada Mixta</span> <span class="texto-mostaza">5,50€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Lechuga, maíz, atún, cebolla, aceitunas.</span>
+                    </li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Ensalada Especial</span> <span class="texto-mostaza">6,50€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Lechuga, maíz, rúcula, tomate cherry, cebolla, aceitunas, salmón.</span>
+                    </li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Ensalada César</span> <span class="texto-mostaza">6,50€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Lechuga, tomate cherry, pollo, queso, cebolla, salsa César.</span>
+                    </li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Ensalada Kebab</span> <span class="texto-mostaza">6,90€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Lechuga, cebolla, tomate cherry, maíz, pollo kebab, salsa kebab.</span>
+                    </li>
+                </ul>
+                
+                <h3 class="margen-top">🥤 Bebidas</h3>
+                <ul class="lista-platos-detalle">
+                    <li><span>Refrescos 33cl.</span> <span class="texto-mostaza">1,80€</span></li>
+                    <li><span>Refrescos 2L.</span> <span class="texto-mostaza">3,00€</span></li>
+                    <li><span>Botella de agua 500ml.</span> <span class="texto-mostaza">1,20€</span></li>
+                    <li><span>Lambrusco</span> <span class="texto-mostaza">7,00€</span></li>
                 </ul>
             </div>
 
             <div class="columna">
-                <h3>🍟 Entrantes</h3>
+                <h3>🍟 Complementos</h3>
                 <ul class="lista-platos-detalle">
-                    <li><span>Nuggets (6u)</span> <span class="texto-mostaza">3,90€</span></li>
-                    <li><span>Croquetas (6u)</span> <span class="texto-mostaza">3,90€</span></li>
-                    <li><span>Combo Colisseo</span> <span class="texto-mostaza">6,50€</span></li>
-                    <li><span>Fingers pollo (4u)</span> <span class="texto-mostaza">5,00€</span></li>
-                    <li><span>Fingers mozz. (6u)</span> <span class="texto-mostaza">3,90€</span></li>
-                    <li><span>Aros cebolla (8u)</span> <span class="texto-mostaza">3,90€</span></li>
-                    <li><span>Alitas pollo (6u)</span> <span class="texto-mostaza">5,00€</span></li>
-                    <li><span>Patatas (Ind.)</span> <span class="texto-mostaza">3,10€</span></li>
-                    <li><span>Patatas (Grande)</span> <span class="texto-mostaza">5,00€</span></li>
+                    <li><span>Nuggets de pollo (6 und.)</span> <span class="texto-mostaza">3,90€</span></li>
+                    <li><span>Croquetas de jamón (6 und.)</span> <span class="texto-mostaza">3,90€</span></li>
+                    <li><span>Fingers de pollo (4 und.) <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">5,00€</span></li>
+                    <li><span>Fingers de mozzarella (6 und.)</span> <span class="texto-mostaza">3,90€</span></li>
+                    <li><span>Aros de cebolla (8 und.)</span> <span class="texto-mostaza">3,90€</span></li>
+                    <li><span>Alitas de pollo (6 und.)</span> <span class="texto-mostaza">5,00€</span></li>
+                    <li><span>Patatas gajo o fritas (Individual)</span> <span class="texto-mostaza">3,10€</span></li>
+                    <li><span>Patatas gajo o fritas (Grande)</span> <span class="texto-mostaza">5,00€</span></li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Combo Colisseo</span> <span class="texto-mostaza">6,50€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">4 fingers de mozzarella, 4 nuggets de pollo, patatas individuales y 2 salsas a elegir.</span>
+                    </li>
                 </ul>
 
-                <h3 class="margen-top">🍰 Postres (4,00€)</h3>
+                <h3 class="margen-top">🍰 Postres y Helados</h3>
                 <ul class="lista-platos-detalle">
-                    <li>Tartas: Chocolate, Queso, Zanahoria, Manzana</li>
-                    <li>Brownie con helado</li>
-                    <li>Profiteroles (4u)</li>
-                    <li>Gofre</li>
-                    <li><span>Tarrina Haagen-Dazs</span> <span class="texto-mostaza">7,00€</span></li>
+                    <li><span>Tarta muerte por chocolate <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">4,00€</span></li>
+                    <li><span>Brownie + helado de vainilla (Solo local) <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">4,00€</span></li>
+                    <li><span>Tarta de queso con sirope y topping lotus <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">4,00€</span></li>
+                    <li><span>Tarta de queso con topping KitKat y sirope de chocolate <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">4,00€</span></li>
+                    <li><span>Tarta de zanahoria <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">4,00€</span></li>
+                    <li><span>Tarta de manzana <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">4,00€</span></li>
+                    <li><span>Profiteroles (4 und.)</span> <span class="texto-mostaza">4,00€</span></li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Gofre <span class="etiqueta-pequena">NUEVO</span></span> <span class="texto-mostaza">4,00€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Elige entre sirope de fresa, chocolate, chocolate blanco, Lotus o caramelo.</span>
+                    </li>
+                    <li style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span>Tarrina Haagen-Dazs 460ml.</span> <span class="texto-mostaza">7,00€</span>
+                        </div>
+                        <span class="nota" style="text-align: left; margin-top: 5px;">Sabores: cookies and cream, nueces de macadamia, dulce de leche, chocolate belga, tarta de queso.</span>
+                    </li>
                 </ul>
             </div>
         </div>
