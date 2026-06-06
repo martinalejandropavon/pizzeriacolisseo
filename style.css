@@ -15,6 +15,10 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+html {
+    scroll-behavior: smooth; /* Hace que toda la página se desplace de forma fluida */
+    scroll-padding-top: 90px; /* Evita que el menú fijo tape el contenido al saltar */
+}
 
 body {
     background-color: var(--negro-fondo);
