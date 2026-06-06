@@ -512,3 +512,41 @@ footer { background-color: #111; padding: 40px 15px 20px; border-top: 1px solid 
     
     .contenedor-tabla { max-width: 700px; margin: 40px auto; }
 }
+/* Tablas de Alérgenos */
+.contenedor-tabla-alergenos {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    border: 1px solid #3d3d3b;
+}
+
+.contenedor-tabla-alergenos table {
+    width: 100%;
+    min-width: 600px; /* Obliga a la tabla a mantener un tamaño legible, activando el scroll en móvil */
+    border-collapse: collapse;
+    background-color: var(--negro-tarjeta);
+    text-align: left;
+}
+
+.contenedor-tabla-alergenos th {
+    background-color: var(--amarillo-mostaza);
+    color: var(--negro-fondo);
+    padding: 12px 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    position: sticky;
+    top: 0;
+}
+
+.contenedor-tabla-alergenos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #3d3d3b;
+    color: var(--blanco-texto);
+    font-size: 0.9rem;
+}
+
+.contenedor-tabla-alergenos tr:hover {
+    background-color: #2e2e2d;
+}
